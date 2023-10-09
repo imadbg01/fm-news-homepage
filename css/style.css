@@ -71,8 +71,9 @@ body {
  * Utilites 
  ********************/
 .wrapper {
-    max-width: 80%;
+    max-width: 75rem;
     margin-inline: auto;
+    padding-inline: 1rem;
 }
 
 .sr-only {
@@ -90,20 +91,28 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     list-style: none;
 }
 
 .nav-link {
     text-decoration: none;
     color: hsl(240, 100%, 5%);
+    font-size: 1rem;
+    text-transform: capitalize;
+    transition: color 200ms ease-in-out;
+}
+.nav-link:hover, .nav-link:focus-visible {
+  color: var(--Soft-red);
 }
 
 
 .main-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 1.25rem;
+  gap: 1.5rem;
+  column-gap: 1.25rem;
+  row-gap: 2rem;
 }
 
 /******************** 
@@ -130,13 +139,14 @@ body {
 .intro-content {
   display: grid;
   gap: .5rem;
+  color: var(--Dark-grayish-blue);
 }
 
 .intro-content a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: .6rem .9rem;
+  padding: .3rem .9rem;
   background-color: var(--Soft-red);
   color: var(--Off-white);
   text-transform: uppercase;
@@ -144,7 +154,7 @@ body {
   width: 70%;
   transition: background-color 200ms ease-in-out;
 }
-.intro-content a:hover ,intro-content a:focus-visible {
+.intro-content a:hover ,.intro-content a:focus-visible {
   background-color: var(--Very-dark-blue);
 }
 /******************** 
@@ -153,16 +163,18 @@ body {
 .aside {
   background-color: var(--Very-dark-blue);
   padding: 1rem 1.6rem;
+  display: grid;
 }
 
 .aside > h2 {
   color: var(--Soft-orange);
+  font-size: 2.3rem;
 }
 
 .aside ul {
   margin-block: 1rem;
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
 }
 .aside a {
   color: var(--Off-white);
@@ -186,14 +198,48 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  outline: 1px solid black;
+}
+
+.news-item {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.news-item-img {
+  width: 8rem;
+}
+
+.news-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.news-item-content > span {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--Grayish-blue);
+}
+
+
+.news-item-content > a {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.news-item-content > p {
+  max-width: 30ch;
+  color: var(--Dark-grayish-blue);
 }
 
 
 
 
-
-
 .attribution {
-    display: none;
+  text-align: center;
+  padding: 3rem;
+  margin-block: 2rem;
 }
